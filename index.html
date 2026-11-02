@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ground Truth Racing</title><style>
+:root{--bg:#fafaf8;--fg:#1a1a1a;--muted:#5c5c5c;--accent:#e34948}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--muted:#a3a3a3}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,sans-serif}
+main{max-width:680px;margin:0 auto;padding:40px 16px}
+h1{font-size:30px;line-height:1.2;margin:16px 0 8px}h2{font-size:20px;margin-top:32px}
+p,li{color:var(--fg)}.muted{color:var(--muted)}a{color:var(--accent)}
+img{width:96px;height:96px;border-radius:50%}
+nav a{margin-right:16px}
+code{word-break:break-all;background:rgba(127,127,127,.15);padding:2px 6px;border-radius:4px}
+button{font:inherit;padding:10px 18px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+</style></head>
+<body><main>
+<nav><a href="">Ground Truth Racing</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a></nav>
+
+<img src="logo.png" alt="Ground Truth Racing logo: the seven-color tyre compound rainbow on a sidewall">
+<h1>Ground Truth Racing</h1>
+<p>Everyone watches the cars. We watch the tyres.</p>
+<p>Data cards and short videos on F1, F2 and Formula E: where lap time is really won, micro sector by micro sector, built from public timing and telemetry. For ex-karters, historic racers, and anyone who reads the timing screens.</p>
+<p>Find us as <strong>@groundtruthracing</strong> on Instagram, YouTube, TikTok and X.</p>
+<h2>Race Weekend Brief</h2>
+<p>Before every race: the model's qualifying pick, where the lap is won at that track, the track specialists, and last year's tyre story. Written before the cars run, graded in public afterward. <a href="briefs/">Read the briefs</a>, and every call we have made, misses included, in the <a href="predictions/">prediction log</a>.</p>
+<p id="signup"><span class="muted">Free by email every race week. Sign-up link coming this week.</span></p>
+<h2>The 2026 Tyre Report</h2>
+<p>After Abu Dhabi: the season's tyres in one PDF. Every pit stop ranked, the longest stints, what a new set was worth at every track, who is fast where, and the eras. <a href="report/">What is inside, with sample pages</a>. <span id="report" class="muted">Out December 8, $9.</span></p>
+<h2>About the publishing app</h2>
+<p>Ground Truth Racing uses a small private app to upload its own videos to its own accounts on a schedule. It posts only to the Ground Truth Racing accounts, and it is not offered to anyone else. See the <a href="privacy/">privacy policy</a> and <a href="terms/">terms</a>.</p>
+
+<script>
+fetch("links.json").then(r => r.json()).then(l => {
+  if (l.signup) document.getElementById("signup").innerHTML = '<a href="' + l.signup + '">Get the brief by email, free</a>';
+  if (l.report) document.getElementById("report").innerHTML = '<a href="' + l.report + '">Buy the report, $9</a>';
+}).catch(() => {});
+</script>
+</main></body></html>

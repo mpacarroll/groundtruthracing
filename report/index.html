@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The 2026 Tyre Report</title><style>
+:root{--bg:#fafaf8;--fg:#1a1a1a;--muted:#5c5c5c;--accent:#e34948;--line:#e4e2dc}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--muted:#a3a3a3;--line:#2a2a2a}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px}h1{font-size:30px;line-height:1.2;margin:8px 0}
+h2{font-size:20px;margin-top:36px}.muted{color:var(--muted)}a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow-x:auto}code{overflow-wrap:anywhere}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--muted);font-weight:600}td.n{text-align:right;font-variant-numeric:tabular-nums}
+.cta{margin:36px 0;padding:20px;border:1px solid var(--line);border-radius:12px}
+.cta a.btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+img{max-width:100%;height:auto;border-radius:8px}nav a{margin-right:16px}
+</style><style>.samples{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
+.samples img{border:1px solid var(--line)}.price{font-size:28px;font-weight:700}</style></head><body><main>
+<nav><a href="../">Ground Truth Racing</a><a href="../briefs/">Race Weekend Briefs</a></nav>
+<p class="muted">PDF, about 21 pages, letter size, prints clean</p>
+<h1>The 2026 Tyre Report</h1>
+<p>Where the season's lap time was really won, under the surface. Every card we posted, rebuilt for print, plus the tables nobody posts: every pit stop of the year ranked by what it gained, the longest stints on one set, and every team and driver by corner class.</p>
+<div class="cta"><span class="price">$9</span> <span class="muted">one PDF, yours to keep</span><br>
+<p id="buy" class=muted>The 2026 edition ships after Abu Dhabi, on December 8. Buying opens the same day.</p>
+<p class=muted>Until then, the <a href="../briefs/">Race Weekend Brief</a> is free every race week.</p></div>
+<h2>What is inside</h2><ol><li>A new set of softs: what it was worth, track by track</li><li>Track evolution: how much faster qualifying got</li><li>The sets that wouldn&#x27;t die</li><li>The best pit stops of the season</li><li>Where the tyres wore out fastest</li><li>The crossover: slicks against wet tyres, lap by lap</li><li>Who wins the corners, who wins the straights</li><li>Who is fast where: every driver by corner type</li><li>Same car, different corners</li><li>We built a model. Here is its record</li><li>Where the 2026 cars lost their time</li><li>Monaco pole, 2003 to now</li>
+<li>The tables: every pit stop ranked, the thirty longest stints, teams and drivers by corner class</li><li>Method and sources</li></ol>
+<h2>Sample pages</h2><div class="samples"><img src="sample-1.png" alt="Sample page 1 of the 2026 Tyre Report" loading="lazy"><img src="sample-2.png" alt="Sample page 2 of the 2026 Tyre Report" loading="lazy"><img src="sample-3.png" alt="Sample page 3 of the 2026 Tyre Report" loading="lazy"></div>
+<h2>How it is built</h2>
+<p>Every number is measured. Lap times, sectors, compounds and tyre ages come from F1's timing feed via TracingInsights; classifications from Jolpica; telemetry from TracingInsights and OpenF1. A track's road is cut into micro sectors from its 2025 pole lap, classed by minimum speed, so every car is measured on the same stretches of road. Nothing is simulated or estimated. Scales start at zero.</p>
+<p class="muted">Questions before buying: a direct message to @groundtruthracing on Instagram. Not affiliated with Formula 1, the FIA or any team.</p>
+<script>fetch("../links.json").then(r => r.json()).then(l => { const b = document.getElementById("buy");
+if (l.report && b) b.innerHTML = '<a class="btn" href="' + l.report + '">Buy the report, $9</a>'; }).catch(() => {});</script>
+</main></body></html>
